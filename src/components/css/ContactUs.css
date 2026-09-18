@@ -1,0 +1,235 @@
+/* ==========================================
+   CONTACT US COMPONENT STYLES
+   ========================================== */
+
+.contactus-section {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+/* One-Line Bold Highlight Banner */
+.contact-offer-banner {
+  background: linear-gradient(135deg, #fdf2f8 0%, #ffffff 100%);
+  border: 2px solid #fbcfe8;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.08);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: #e11d48;
+  color: #ffffff;
+  border-radius: 99px;
+  font-size: 0.725rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.contact-offer-text {
+  font-size: 0.925rem;
+  color: #0f172a;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+.contact-offer-text strong {
+  color: #be185d;
+  font-weight: 800;
+}
+
+.contactus-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+/* Left Column: Contact Information Cards */
+.contactus-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  border-color: #fbcfe8;
+  box-shadow: 0 12px 25px rgba(225, 29, 72, 0.08);
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #fdf2f8;
+  border: 1px solid #fbcfe8;
+  color: #e11d48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-text h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.info-text p {
+  font-size: 0.925rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Right Column: Contact Form Card */
+.contactus-form-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  text-align: left;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.form-field label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border: 1.5px solid #cbd5e1;
+  background: #f8fafc;
+  font-family: var(--font-body);
+  font-size: 0.925rem;
+  color: #0f172a;
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #e11d48;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.12);
+}
+
+.submit-btn-pink {
+  width: 100%;
+  padding: 0.95rem 1.75rem;
+  background: linear-gradient(135deg, #e11d48 0%, #db2777 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.submit-btn-pink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.45);
+}
+
+.submit-btn-pink:active {
+  transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 868px) {
+  .contactus-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contactus-form-card {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .contact-offer-text {
+    font-size: 0.775rem !important;
+  }
+
+  .info-text h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .info-text p {
+    font-size: 0.8rem !important;
+  }
+
+  .contactus-form-card label {
+    font-size: 0.8rem !important;
+  }
+
+  .contactus-form-card input,
+  .contactus-form-card select,
+  .contactus-form-card textarea {
+    font-size: 0.825rem !important;
+    padding: 0.6rem 0.85rem !important;
+  }
+}

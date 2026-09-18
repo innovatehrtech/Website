@@ -1,0 +1,127 @@
+/* ==========================================
+   CLIENTS COMPONENT STYLES
+   ========================================== */
+
+.clients-section {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.client-brand-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 120px;
+  overflow: hidden;
+}
+
+.client-brand-card:hover {
+  transform: translateY(-4px);
+  border-color: #10b981;
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.12);
+}
+
+.client-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.client-brand-logo {
+  max-height: 60px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.03));
+  transition: transform 0.25s ease;
+}
+
+.client-brand-card:hover .client-brand-logo {
+  transform: scale(1.04);
+}
+
+/* Testimonials Section */
+.testimonials-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1rem;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card-header {
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  overflow: hidden;
+}
+
+.testimonial-mini-logo {
+  max-height: 34px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.author-role {
+  font-size: 0.8rem;
+  color: #e11d48;
+  font-weight: 600;
+}
