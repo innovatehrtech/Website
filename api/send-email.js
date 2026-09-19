@@ -39,18 +39,19 @@ export default async function handler(req, res) {
 
     loadLocalEnv();
 
-    const user = (process.env.MY_GMAIL).trim();
-    const pass = (process.env.GMAIL_PASS).trim();
+    const user = (process.env.MY_GMAIL || '').trim();
+    const pass = (process.env.GMAIL_PASS || '').trim();
 
     if (!user || !pass) {
-        console.error('ENV VARIABLES MISSING! user:', user, 'pass exists:', !!pass);
+        console.error('ENV VARIABLES MISSING! MY_GMAIL is set:', !!user, 'GMAIL_PASS is set:', !!pass);
         return res.status(500).json({
             success: false,
-            message: 'Server configuration error: Email credentials missing.'
+            message: 'Server configuration error: Email credentials missing. Please set MY_GMAIL and GMAIL_PASS environment variables in Vercel.'
         });
     }
 
-    const { formType, ...data } = req.body;
+    const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
+    const { formType, ...data } = body;
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
