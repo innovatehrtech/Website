@@ -39,8 +39,8 @@ export default async function handler(req, res) {
 
     loadLocalEnv();
 
-    const user = (process.env.MY_GMAIL || process.env.GMAIL_USER || process.env.gmail || process.env.GMAIL || '').trim();
-    const pass = (process.env.GMAIL_PASS || process.env.GMAIL_PASSWORD || process.env.password || process.env.PASSWORD || '').trim();
+    const user = (process.env.MY_GMAIL).trim();
+    const pass = (process.env.GMAIL_PASS).trim();
 
     if (!user || !pass) {
         console.error('ENV VARIABLES MISSING! user:', user, 'pass exists:', !!pass);
